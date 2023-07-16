@@ -6,6 +6,7 @@ const dataSlice = createSlice({
   initialState: {
     projects: Projects,
     uniqueItems: uniqueItems,
+    currentValue: [],
   },
   reducers: {
     addProject: (state, action) => {

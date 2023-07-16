@@ -1,12 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../themeSlice";
-import { addProject } from "../dataSlice";
 
 const ToggleButton = () => {
   const theme = useSelector((state) => state.theme);
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.data);
 
   const handleToggleChange = (event) => {
     const isChecked = event.target.checked;
@@ -16,7 +14,7 @@ const ToggleButton = () => {
       dispatch(toggleTheme());
     }
   };
-  
+
   return (
     <div className="toggle-switch">
       <label className="switch-label">

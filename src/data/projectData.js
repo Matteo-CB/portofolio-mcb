@@ -82,13 +82,13 @@ function getMethodologies(...indexs) {
   );
 }
 
-function getImagesPublic(name) {
+export function getImagesPublic(name) {
   return "./images/projects/" + name;
 }
-function getImagesStyle(name) {
+export function getImagesStyle(name) {
   return "../images/projects/" + name;
 }
-function getImagesCarousel(name) {
+export function getImagesCarousel(name) {
   return "../images/projects/" + name;
 }
 
@@ -193,10 +193,64 @@ function getUniqueItems(projects) {
     const countTechno = allTechno.count(technos);
     howManyTimesUse.push(technos + " " + countTechno);
   });
+
   return {
     techno: uniqueTechno,
     outils: uniqueOutils,
     methodologies: uniqueMethodologies,
+    All: {
+      techno: getTechno(
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ),
+      outils: getOutils(
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ),
+      methodologies: getMethodologies(0, 1, 2, 3, 4, 5),
+    },
   };
 }
 

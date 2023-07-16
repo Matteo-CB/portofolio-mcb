@@ -11,8 +11,8 @@ const Details = () => {
   const theme = useSelector((state) => state.theme);
   const data = useSelector((state) => state.data);
   useEffect(() => {
-    window.scroll(0,0)
-  }, [])
+    window.scroll(0, 0);
+  }, []);
   return (
     <div className={`details app ${theme}`}>
       <Header data={"../."} />
@@ -30,9 +30,7 @@ const Details = () => {
             data.projects[id].techno.map((e, index) => {
               return (
                 <div className="contain-tags" key={index}>
-                  <span className="tags tags-techno" >
-                    {e}
-                  </span>
+                  <span className="tags tags-techno">{e}</span>
                 </div>
               );
             })}
@@ -44,9 +42,7 @@ const Details = () => {
             data.projects[id].outils.map((e, index) => {
               return (
                 <div className="contain-tags" key={index}>
-                  <span className="tags tags-outils" >
-                    {e}
-                  </span>
+                  <span className="tags tags-outils">{e}</span>
                 </div>
               );
             })}
@@ -58,9 +54,7 @@ const Details = () => {
             data.projects[id].methodologies.map((e, index) => {
               return (
                 <div className="contain-tags" key={index}>
-                  <span className="tags tags-metho" >
-                    {e}
-                  </span>
+                  <span className="tags tags-metho">{e}</span>
                 </div>
               );
             })}

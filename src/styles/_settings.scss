@@ -568,7 +568,7 @@ body{
         font-size: 1.4rem;
         padding: 10px 0;
     }
-    p{
+    p:not(.p){
         width: 80%;
         margin: 40px auto;
         font-size: 0.8rem;
@@ -625,8 +625,8 @@ color: white;
     align-items: center;
     justify-content: center;
     height: 60vh;
+    padding: 40px 0;
     .form-container{
-        
         box-shadow: rgba(0, 0, 0, 0.8) 0px 4px 8px, rgba(0, 0, 0, 0.6) 0px 14px 26px -6px, rgba(0, 0, 0, 0.2) 0px -6px 0px inset;
         padding: 30px 5px;
         @media screen and (max-width:662px) {
@@ -715,6 +715,7 @@ color: white;
     p{
         margin: 10px auto 80px auto;
         font-size: 0.8rem;
+        padding-bottom: 30px;
         width: 80%;
         @media screen and (max-width:662px) {
             width: 100%;
@@ -746,5 +747,154 @@ color: white;
             margin: -60px 0 0 0;
         }
         
+    }
+}
+.dark{
+    .no-admin, .admin{
+        background: $bgDark;
+    }
+}
+.light{
+    .no-admin, .admin{
+        background: $bgLight;
+    }
+}
+.close{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    cursor: pointer;
+}
+.no-admin, .admin{
+    
+    z-index: -20;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   
+   width: 60%;
+   
+   border-radius: 20px;
+}
+.no-admin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+   min-width: 125px;
+   max-width: 250px;
+    
+}
+.bg-admin{
+    
+    position: fixed;
+    background: 
+    #0000005f;
+    top: 0;
+    left: 0;
+    z-index: -20;
+    height: 800vh;
+    width: 100vw;
+}
+.block{
+    overflow: hidden;
+}
+.bg-admin-open{
+    z-index: 2!important;
+    cursor: pointer;
+}
+.admin-open, .no-admin-open{
+    z-index: 4!important;
+    img{
+        cursor: pointer;
+    }
+}
+.admin{
+    
+    height: 450px;
+   min-width: 375px;
+   max-width: 750px;
+   @media screen and (max-width: 380px) {
+        &{
+            height: 400px;
+            min-width: 250px;
+            max-width: 500px;
+        }
+   }
+}
+.dark{
+    .admin{
+        label{
+            color: white!important;
+        }
+    }
+}
+.container{
+    input{
+        display: none;
+    }
+    flex: 1 1 auto;
+    padding: 2px;
+    max-width: max-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.flex-label{
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+summary{
+    width: max-content;
+    user-select: none;
+    cursor: pointer;
+    h3{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 10px;
+            transform: 0.5s;
+        }
+    }
+}
+.container{
+    user-select: none;
+}
+.dark{
+    .checked{
+
+        background:$tertiaryDark;
+    }
+}
+.checked{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background: $buttonLight;
+    color: white!important;
+}
+.turn{
+    animation: turn 0.3s ease forwards;
+}
+.return{
+    animation: return 0.3s ease forwards;
+}
+@keyframes turn {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(-180deg);
+    }
+}
+@keyframes return {
+    0%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform:rotate(-360deg);
     }
 }

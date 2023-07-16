@@ -4,32 +4,30 @@ import { toggleFilter } from "../filterSlice";
 
 const Filter = () => {
   const data = useSelector((state) => state.data);
-  const filter = useSelector((state) => state.filter);
   const dispatch = useDispatch();
   const [filterLanguage, setFilterLanguage] = useState("");
   const onOptionChange = (e) => {
-    setFilterLanguage(e.target.value)
-    
+    setFilterLanguage(e.target.value);
   };
   useEffect(() => {
-    dispatch(toggleFilter(filterLanguage))
-  }, [filterLanguage])
-  
+    dispatch(toggleFilter(filterLanguage));
+  }, [filterLanguage]);
+
   return (
     <div className="radio-inputs">
-       <label className="radio">
-              <input
-                type="radio"
-                name="radio"
-                id={''}
-                value={''}
-                checked={!filterLanguage}
-                onChange={onOptionChange}
-              />
-              <span className="name">Tous</span>
-            </label>
+      <label className="radio">
+        <input
+          type="radio"
+          name="radio"
+          id={""}
+          value={""}
+          checked={!filterLanguage}
+          onChange={onOptionChange}
+        />
+        <span className="name">Tous</span>
+      </label>
       {data &&
-        data.uniqueItems.techno.map((e,index) => {
+        data.uniqueItems.techno.map((e, index) => {
           return (
             <label key={index} className="radio">
               <input

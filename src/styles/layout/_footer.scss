@@ -1,6 +1,5 @@
 footer{
     padding: 20px;
-    
     display: flex;
     position: relative;
     justify-content: flex-start;
@@ -17,7 +16,8 @@ footer{
             padding-bottom: 30px;
             font-size: 0.6rem;
         }
-        a{
+        a, .p{
+            cursor: pointer;
             text-decoration: underline;
             padding: 5px 0;
         }
@@ -52,12 +52,13 @@ footer{
         }
     }
     
-    margin: 40px 0 0 0;
+    margin: 120px 0 0 0;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .dark{
     footer{
-        a{
+        a, .p{
+            
             color: white;
         }
         ul{

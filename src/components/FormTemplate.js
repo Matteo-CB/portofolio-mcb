@@ -42,8 +42,8 @@ const FormTemplate = () => {
       <div className="contact-text">
         <h2>Contact</h2>
         <p>
-          I would love to hear about your project and how I could help. Please
-          fill in the form, and I’ll get back to you as soon as possible.
+          N'hésitez pas à me détailler votre projet, j'y répondrai avec plaisir
+          !
         </p>
       </div>
       <div className="container-form" id="contact">
